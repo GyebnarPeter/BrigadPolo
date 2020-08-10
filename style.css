@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;600;700&family=Barlow+Condensed:wght@200;300;400;500;600;700&display=swap');
+
+/*
+font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+*/
+
+:root {
+    --brand-color: #e33d3d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ------------------ HEADER ------------------ */
+
+.header-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 30px;
+}
+
+.header-logo img {
+    width: 80px;
+}
+
+.shopping-cart-icon {
+    position: relative;
+}
+
+.shopping-cart-icon svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.shopping-cart-icon svg:hover {
+    fill: var(--brand-color);
+}
+
+.shopping-cart-icon-quatity {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: var(--brand-color);
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 20px;
+    transition: .4s
+}
+
+nav a:hover {
+    color: var(--brand-color);
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 2px;
+    background: var(--brand-color);
+    display: block;
+}
+
+.burger-icon span:nth-child(2) {
+    margin: 4px 0;
+    width: 20px;
+}
+
+.nav-close-btn {
+    display: none;
+}
+
+/* ------------------ COVER ------------------ */
+
+.cover {
+    width: 100%;
+    max-width: 1920px;
+    margin: 105px auto;
+    background: url(./img/cover-bg.jpg) no-repeat bottom;
+    background-size: cover;
+    height: 500px;
+    color: red;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    nav, .shopping-cart-icon {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 100;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    nav a {
+        color: white;
+        display: block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .burger-icon {
+        display: block;
+        z-index: 200;
+    }
+
+    .nav-close-btn {
+        display: block;
+    }
+
+}
