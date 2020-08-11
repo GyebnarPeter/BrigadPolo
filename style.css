@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;600;700&family=Barlow+Condensed:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
 
 /*
 font-family: 'Bai Jamjuree', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Mr Dafoe', cursive;
 */
 
 :root {
@@ -15,7 +18,9 @@ font-family: 'Barlow Condensed', sans-serif;
 
 body {
     margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
 }
+
 
 /* ------------------ HEADER ------------------ */
 
@@ -25,13 +30,13 @@ body {
     left: 0;
     background: white;
     width: 100%;
+    z-index: 10000;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Barlow Condensed', sans-serif;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
@@ -62,6 +67,7 @@ header {
     right: -10px;
     color: var(--brand-color);
 }
+
 nav a {
     text-decoration: none;
     color: black;
@@ -97,16 +103,224 @@ nav a:hover {
     display: none;
 }
 
+
 /* ------------------ COVER ------------------ */
 
 .cover {
+    font-family: 'Bai Jamjuree', sans-serif;
     width: 100%;
     max-width: 1920px;
     margin: 105px auto;
     background: url(./img/cover-bg.jpg) no-repeat bottom;
     background-size: cover;
-    height: 500px;
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-left-box {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: right;
+}
+
+.cover-left-box p {
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 20px;
+    margin: 0;
+}
+
+.cover-left-box p:nth-child(2) {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.cover-left-box h1 {
+    color: var(--brand-color);
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 150px;
+    font-weight: 200;
+    margin: -70px 0 0 0;
+}
+
+.cover-right-box {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    padding-right: 120px;
+}
+
+.cover-right-box img {
+    height: 400px;
+}
+
+.cover-right-box .fade-img {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    height: 350px;
+}
+
+/* ------------------ T-SHIRTS ------------------ */
+
+.t-shirts {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        't-shirt-1 t-shirt-2 t-shirt-2'
+        't-shirt-1 t-shirt-3 t-shirt-3'
+        't-shirt-4 t-shirt-4 t-shirt-6'
+        't-shirt-5 t-shirt-5 t-shirt-6';
+    grid-gap: 5px;
+}
+
+.t-shirt-1 {
+    height: 700px;
+    grid-area: t-shirt-1;
+    background: url("./img/polo1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.t-shirt-2 {
+    grid-area: t-shirt-2;
+    background: url("./img/polo2.jpg") no-repeat top;
+    background-size: cover;
+}
+
+.t-shirt-3 {
+    grid-area: t-shirt-3;
+    background: url("./img/polo3.jpg") no-repeat top;
+    background-size: cover;
+}
+
+.t-shirt-4 {
+    grid-area: t-shirt-4;
+    background: url("./img/polo4.jpg") no-repeat top;
+    background-size: cover;
+}
+
+.t-shirt-5 {
+    grid-area: t-shirt-5;
+    background: url("./img/polo5.jpg") no-repeat top;
+    background-size: cover;
+}
+
+.t-shirt-6 {
+    height: 700px;
+    grid-area: t-shirt-6;
+    background: url("./img/polo6.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.t-shirts-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.t-shirts-head h1 {
+    margin: 0;
+}
+
+.t-shirts-head svg {
+    width: 150px;
+    fill: var(--brand-color);
+}
+
+
+/* ------------------ SHOP-INFO ------------------ */
+
+.shop-info {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.shop-info-top {
+    background: url("./img/shop-info-bg-top.jpg") no-repeat top;
+    background-size: cover;
+    color: white;
+    text-transform: uppercase;
+    padding: 150px 0 150px 100px;
+    margin-top: 50px;
+}
+
+.shop-info-top p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.shop-info-top h1 {
+    font-size: 60px;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.shop-info-bottom {
+    background: url("./img/shop-info-bg-bottom.jpg") no-repeat bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.shop-info-bottom svg {
+    width: 70px;
+    fill: var(--brand-color);
+    margin-right: 20px;
+}
+
+.shop-info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.shop-info-box h4 {
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+}
+
+.shop-info-box p {
+    margin: 0;
+    color: #6e6e6e;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    .cover-left-box p:nth-child(2) {
+        font-size: 50px;
+    }
+
+    .cover-left-box h1 {
+        font-size: 100px;
+        margin: -50px 0 0 0;
+    }
+
+    .cover-right-box {
+        padding-right: 50px;
+    }
+
+    .cover-right-box img {
+        height: 300px;
+    }
+
+    .cover-right-box .fade-img {
+        top: 30px;
+        left: 130px;
+        height: 250px;
+    }
 }
 
 
@@ -141,6 +355,50 @@ nav a:hover {
     }
 
     .nav-close-btn {
+        display: block;
+    }
+
+    .cover {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .cover-left-box {
+        text-align: center;
+    }
+
+    .cover-left-box p {
+        font-size: 16px;
+    }
+
+    .cover-left-box p:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .cover-left-box h1 {
+        font-size: 90px;
+        margin: -40px 0 0 0;
+    }
+
+    .cover-right-box {
+        padding-right: 0;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .cover-right-box img {
+        height: 250px;
+    }
+
+    .cover-right-box .fade-img {
+        top: 30px;
+        left: 80px;
+        height: 200px;
+    }
+
+    .t-shirts {
         display: block;
     }
 
