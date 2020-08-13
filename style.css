@@ -312,6 +312,7 @@ nav a:hover {
 
 .opinions-head h1 {
     margin: 0;
+    font-size: 2em;
 }
 
 .opinions-head svg {
@@ -322,8 +323,59 @@ nav a:hover {
 .opinions {
     background: url("./img/opinions-bg.jpg") no-repeat top;
     background-size: cover;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0;
+    color: white;
 }
+
+.opinions svg {
+    width: 100px;
+    fill: var(--brand-color);
+    transform: rotate(180deg);
+}
+
+.opinions article {
+    width: 800px;
+    text-align: center;
+    margin: 60px 0;
+    font-size: 1.8em;
+    font-style: italic;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.opinions-nav {
+    display: flex;
+}
+
+.opinions-nav .fa-chevron-left, .opinions-nav .fa-chevron-right {
+    border: 1px solid rgb(99, 99, 99);
+    padding: 20px 22px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.opinions-nav .fa-chevron-left:hover, .opinions-nav .fa-chevron-right:hover {
+    border: 1px solid var(--brand-color);
+    color: var(--brand-color);
+}
+
+.opinions .person {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.opinions .person span {
+    color: var(--brand-color);
+}
+
+
+/* ------------------ FOOTER ------------------ */
+
+
 
 
 @media only screen and (max-width: 1100px) {
@@ -374,6 +426,10 @@ nav a:hover {
 
     .shop-info-bottom .fourth-box {
         grid-area: fourth-box;
+    }
+
+    .opinions article {
+        width: 80%;
     }
 
 }
@@ -489,5 +545,9 @@ nav a:hover {
 
     .shop-info-bottom .second-box svg, .shop-info-bottom .fourth-box svg {
         margin-left: 30px;
+    }
+
+    .opinions article {
+        font-size: 1em;
     }
 }
